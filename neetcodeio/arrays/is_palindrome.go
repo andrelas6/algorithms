@@ -4,7 +4,7 @@ package arrays
  * 1st cycle
  * GREEN
  * mistake: forgot during implemntation to only apply lowercase to chars
- * time complexity: O(log n)
+ * time complexity: O(n) - each pointer crosses the string once, so at most n steps total
  * space complexity: O(1)
  */
 func isPalindrome(s string) bool {
