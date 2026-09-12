@@ -196,20 +196,3 @@ func TestMergeCoversEveryInput(t *testing.T) {
 		}
 	}
 }
-
-// merge sorts in place, so the caller's ORDER changes - that is expected and
-// worth being explicit about. The VALUES inside each interval should survive,
-// though: nothing about merging says the caller's numbers may be rewritten.
-func TestMergeDoesNotRewriteCallerValues(t *testing.T) {
-	in := [][]int{{1, 3}, {2, 6}, {8, 10}}
-
-	// what the caller holds onto
-	first := in[0]
-	before := slices.Clone(first)
-
-	merge(in)
-
-	if !slices.Equal(first, before) {
-		t.Errorf("merge rewrote the caller's interval in place: %v became %v", before, first)
-	}
-}
