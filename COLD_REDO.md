@@ -15,6 +15,9 @@ Rules:
 | 2 | **Merge Intervals** | 2026-09-11 — landed on the right idea after a nudge; lost time to an out-of-bounds index | 15 min | **2026-09-14** | |
 | 3 | **Encode and Decode Strings** | 2026-09-12 — overcomplicated the first pass with a structure that lost order and duplicates | 15 min | **2026-09-15** | |
 | 4 | **Product of Array Except Self** | 2026-09-14 — brute force came easily, the improvement needed every hint | 15 min | **2026-09-17** | |
+| 5 | **Valid Binary Search Tree** | 2026-09-15 — had only a brute-force idea and never wrote it; needed the full solution walkthrough | 15 min | **2026-09-18** | |
+| 6 | **Kth Largest Element in an Array** | 2026-09-15 — the easy version came quickly; the faster one needed the full answer and still slows to a crawl on some large inputs | 20 min | **2026-09-18** | |
+| 7 | **Permutation in String** | 2026-09-15 — found the idea without help, but the implementation was shaky and had leftover steps it didn't need | 20 min | **2026-09-18** | |
 
 ---
 
@@ -148,3 +151,100 @@ O(n) time, and with O(1) extra space — the returned array does not count towar
 Edge cases to think about: a single element, exactly two elements, one zero anywhere in the
 array, two or more zeroes, all zeroes, all negative values with an odd and an even count,
 mixed signs, and every element being 1.
+
+---
+
+## 5. Valid Binary Search Tree
+
+Given the `root` of a binary tree, return `true` if it is a valid binary search tree,
+otherwise return `false`.
+
+A valid binary search tree satisfies all of the following:
+
+- The left subtree of every node contains only nodes with keys **strictly less** than that
+  node's key.
+- The right subtree of every node contains only nodes with keys **strictly greater** than
+  that node's key.
+- Both the left and right subtrees are also binary search trees.
+
+**Input format:** `root` (TreeNode), given in level order where `null` marks an absent
+child.
+
+**Constraints:**
+
+- The number of nodes is in the range `[1, 10^4]`
+- `-2^31 <= Node.val <= 2^31 - 1`
+
+**Output format:** a single BOOLEAN.
+
+```
+Input:  [2,1,3]                  Output: true
+Input:  [5,1,4,null,null,3,6]    Output: false
+Input:  [1,2,3]                  Output: false
+```
+
+Edge cases to think about: a single node, a node with only one child on either side, equal
+values anywhere in the tree, a node that looks fine next to its parent but not next to a
+node higher up, values at the very limits of the allowed range, and a tree that is one long
+path to the left or to the right.
+
+---
+
+## 6. Kth Largest Element in an Array
+
+Given an integer array `nums` and an integer `k`, return the `k`th largest element in the
+array.
+
+Note that it is the `k`th largest element in sorted order, not the `k`th distinct element.
+
+**Input format:** `nums` (INTEGER_ARRAY) and `k` (INTEGER).
+
+**Constraints:**
+
+- `1 <= k <= nums.length <= 10^5`
+- `-10^4 <= nums[i] <= 10^4`
+
+**Output format:** a single INTEGER.
+
+```
+Input:  nums = [2,3,1,5,4], k = 2              Output: 4
+Input:  nums = [2,3,1,1,5,5,4], k = 3          Output: 4
+Input:  nums = [3,2,1,5,6,4], k = 2            Output: 5
+Input:  nums = [3,2,3,1,2,4,5,5,6], k = 4      Output: 4
+```
+
+Follow-up worth attempting on the redo: can you solve it without sorting the whole array?
+
+Edge cases to think about: a single element, `k = 1`, `k` equal to the length, duplicates
+at and around the answer, every value equal, negatives, and input that arrives already in
+ascending or descending order at the maximum length.
+
+---
+
+## 7. Permutation in String
+
+Given two strings `s1` and `s2`, return `true` if `s2` contains a permutation of `s1`, or
+`false` otherwise.
+
+In other words, return `true` if one of `s1`'s permutations is a substring of `s2`.
+
+**Input format:** two STRING parameters, `s1` and `s2`.
+
+**Constraints:**
+
+- `1 <= s1.length, s2.length <= 10^4`
+- `s1` and `s2` consist of lowercase English letters
+
+**Output format:** a single BOOLEAN.
+
+```
+Input:  s1 = "abc", s2 = "lecabee"     Output: true
+Input:  s1 = "abc", s2 = "lecaabee"    Output: false
+Input:  s1 = "ab",  s2 = "eidbaooo"    Output: true
+Input:  s1 = "ab",  s2 = "eidboaoo"    Output: false
+```
+
+Edge cases to think about: `s1` longer than `s2`, both strings the same length, a match at
+the very start or the very end of `s2`, letters repeated in `s1`, the right letters with the
+wrong counts, the right letters split apart by other letters, and how much work each
+position of `s2` costs you.
