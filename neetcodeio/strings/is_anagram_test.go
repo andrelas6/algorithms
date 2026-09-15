@@ -1,4 +1,4 @@
-package arrays
+package strings
 
 import (
 	"math/rand"
