@@ -25,5 +25,7 @@ go test ./...
 go vet ./...
 ```
 
+- [SIGNALS.md](./SIGNALS.md) — recognition cheat sheet: signal → pattern, and how to derive
+  the pattern from your own brute force when you can't see it.
 - [AGENTS.md](./AGENTS.md) — how problems get worked here, plus the running pattern catalogue.
 - [COLD_REDO.md](./COLD_REDO.md) — spaced-repetition queue. Statements only, no hints.

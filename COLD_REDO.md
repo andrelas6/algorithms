@@ -14,6 +14,7 @@ Rules:
 | 1 | **Longest Substring Without Duplicate Characters** | 2026-09-08 — first version correct but too slow; needed hints, then the answer, to fix it | 15 min | **2026-09-11** | |
 | 2 | **Merge Intervals** | 2026-09-11 — landed on the right idea after a nudge; lost time to an out-of-bounds index | 15 min | **2026-09-14** | |
 | 3 | **Encode and Decode Strings** | 2026-09-12 — overcomplicated the first pass with a structure that lost order and duplicates | 15 min | **2026-09-15** | |
+| 4 | **Product of Array Except Self** | 2026-09-14 — brute force came easily, the improvement needed every hint | 15 min | **2026-09-17** | |
 
 ---
 
@@ -116,3 +117,34 @@ strings, duplicate strings, whether order survives, strings containing whatever 
 you chose to structure the output with, strings that look like an already-encoded payload,
 strings long enough that any count you write is more than one character wide, and non-ASCII
 text where the number of characters and the number of bytes disagree.
+
+---
+
+## 4. Product of Array Except Self
+
+Given an integer array `nums`, return an array `output` where `output[i]` is the product of
+all elements of `nums` except `nums[i]`.
+
+Each product is guaranteed to fit in a 32-bit integer.
+
+**Input format:** `nums` (INTEGER_ARRAY).
+
+**Constraints:**
+
+- `1 <= nums.length <= 1000`
+- `-20 <= nums[i] <= 20`
+
+**Output format:** an INTEGER_ARRAY of the same length as `nums`.
+
+```
+Input:  [1,2,4,6]        Output: [48,24,12,8]
+Input:  [-1,0,1,2,3]     Output: [0,-6,0,0,0]
+Input:  [1,2,3,4]        Output: [24,12,8,6]
+```
+
+Follow-up worth attempting on the redo: solve it without using the division operator, in
+O(n) time, and with O(1) extra space — the returned array does not count towards the space.
+
+Edge cases to think about: a single element, exactly two elements, one zero anywhere in the
+array, two or more zeroes, all zeroes, all negative values with an odd and an even count,
+mixed signs, and every element being 1.
