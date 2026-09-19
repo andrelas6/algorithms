@@ -191,8 +191,8 @@ func TestLowestCommonAncestorEveryPairAgainstPaths(t *testing.T) {
 		{5, 3, 8, 1, 4, 7, 9},
 		{6, 2, 8, 0, 4, 7, 9, 3, 5},
 		{50, 30, 70, 20, 40, 60, 80, 10, 25, 35, 45},
-		{1, 2, 3, 4, 5, 6},          // right chain
-		{6, 5, 4, 3, 2, 1},          // left chain
+		{1, 2, 3, 4, 5, 6}, // right chain
+		{6, 5, 4, 3, 2, 1}, // left chain
 		{10, 5, 15, 3, 7, 13, 18, 1},
 		{0, -10, 10, -20, -5, 5, 20},
 	}
