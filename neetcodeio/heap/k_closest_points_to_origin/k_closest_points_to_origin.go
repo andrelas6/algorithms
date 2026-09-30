@@ -22,12 +22,12 @@ Space: O(n)
 */
 func kClosest(points [][]int, k int) [][]int {
 	minHeap := &MinHeap{}
-	heap.Init(minHeap)
 	// first pass, create minHeap
 	for _, point := range points {
 		distance := calcEuclidianDistance(point[0], point[1])
-		heap.Push(minHeap, []int{distance, point[0], point[1]})
+		*minHeap = append(*minHeap, []int{distance, point[0], point[1]})
 	}
+	heap.Init(minHeap)
 
 	result := make([][]int, k)
 	for i := range k {
