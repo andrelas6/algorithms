@@ -1,21 +1,28 @@
 # algorithms
 
-Practice ground for data structures and algorithms interview prep, in Go.
+Daily practice for data structures and algorithms, in Go.
 
-Each problem gets its own folder, named after the **pattern** rather than the problem story —
-recognising the pattern is the skill being drilled, so the folder name is part of the
-exercise. A folder holds the implementation, a `README.md` with the statement, recognition
-signals, approach, traps and review notes, and a test file.
+Each problem gets its own folder, grouped by where it came from and by topic:
+`<source>/<topic>/<problem>/`. A folder holds the implementation and a test file, plus a
+`README.md` with the statement, recognition signals, approach and traps when the problem
+went through the full teaching loop.
 
 ```
-arrays/
-  binary_search/
-    binary_search.go
-    binary_search_test.go
-    README.md
-strings/
-  two_pointers/
-    ...
+neetcodeio/
+  stack/
+    car_fleet/
+      car_fleet.go
+      car_fleet_test.go
+hackerrank/
+  arrays/
+    two_sum/
+      two_sum.go
+      two_sum_test.go
+      README.md
+cracking_the_coding_interview/
+  arrays_lists/
+    urlify/
+      ...
 ```
 
 Run everything:
@@ -25,7 +32,4 @@ go test ./...
 go vet ./...
 ```
 
-- [SIGNALS.md](./SIGNALS.md) — recognition cheat sheet: signal → pattern, and how to derive
-  the pattern from your own brute force when you can't see it.
-- [AGENTS.md](./AGENTS.md) — how problems get worked here, plus the running pattern catalogue.
-- [COLD_REDO.md](./COLD_REDO.md) — spaced-repetition queue. Statements only, no hints.
+`AGENTS.md` describes how problems get worked here and holds the running pattern catalogue.
