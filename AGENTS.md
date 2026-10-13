@@ -198,7 +198,7 @@ add a row once I've actually solved a problem with that pattern.
 | Reverse flood from the edges | "which cells can reach the border/ocean" — start from the target, not every cell | `neetcodeio/graph/atlantic_pacific_water/` |
 | Multi-source BFS | "distance to the nearest X", "minutes until everything is reached" | `neetcodeio/graph/fresh_rotten_fruits/`, `neetcodeio/graph/islands_and_treasure/` |
 | Graph DFS — cycle detection | prerequisites / dependencies + "can you finish" | `neetcodeio/graph/course_schedule/` |
-| Graph DFS + old→new map | "deep copy a graph" | `neetcodeio/graph/clone_graph/` |
+| Old→new map (deep copy) | "deep copy" a graph or a list with extra pointers | `neetcodeio/graph/clone_graph/`, `neetcodeio/linked_list/copy_random_list/` |
 | Backtracking on a grid | "count all paths" where a cell can't be reused | `neetcodeio/graph/count_valid_paths/` |
 | Backwards in-place writing | output is **bigger** than input + O(1) extra space + buffer already padded | `cracking_the_coding_interview/arrays_lists/urlify/` |
 | Count-then-place (two passes) | can't know where to write until you know how much everything expands | `cracking_the_coding_interview/arrays_lists/urlify/` |
