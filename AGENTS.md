@@ -190,7 +190,9 @@ add a row once I've actually solved a problem with that pattern.
 | Quickselect | "k-th largest" in average O(n), no heap | `neetcodeio/heap/kth_largest_value/` |
 | Heap + cooldown queue | "schedule tasks with a cooldown between repeats" | `neetcodeio/heap/task_scheduler/` |
 | Linked list — reversal | "reverse", or a step that needs the second half backwards | `neetcodeio/linked_list/reverse_linked_list/`, `neetcodeio/linked_list/merge_two_linked_lists/` |
+| Digit-by-digit add with carry | numbers stored as digit lists, "add/sum them"; carry is the state | `neetcodeio/linked_list/add_two_numbers/` |
 | Fast/slow pointers | "is there a cycle", "find the middle" | `neetcodeio/linked_list/find_cycle/`, `neetcodeio/linked_list/reorder_linked_list/` |
+| Floyd's on index→value | values in `1..n`, array of n+1, find the duplicate, **can't modify** + O(1) space | `neetcodeio/linked_list/find_duplicate/` |
 | Tree DFS by recursion | tree + "height/depth/longest path"; base case → recurse both children → combine | `neetcodeio/tree/maximum_depth_tree/`, `neetcodeio/tree/diameter_binary_tree/`, `neetcodeio/tree/is_same_tree/`, `neetcodeio/tree/is_subtree/`, `neetcodeio/tree/invert_binary_tree/`, `neetcodeio/tree/count_good_nodes/` |
 | BST — inorder is sorted / bounds | BST + "validate" or "k-th smallest"; pass min/max down | `neetcodeio/tree/inorder_traversal/`, `neetcodeio/tree/valid_binary_search_tree/`, `neetcodeio/tree/kth_smallest_element_bst/`, `neetcodeio/tree/lowest_common_ancestor_bst/` |
 | Tree BFS (level order) | "level by level", "right side view", anything per depth | `neetcodeio/tree/level_order_traversal/`, `neetcodeio/tree/binary_tree_right_side_viewer/`, `neetcodeio/tree/is_binary_tree_balanced/` |
