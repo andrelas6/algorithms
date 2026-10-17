@@ -1,5 +1,7 @@
 package surroundedregions
 
+// Time: O(m*n)
+// Space: O(m*n) because of recursion
 func solve(board [][]byte) {
 	// walk every cell
 
