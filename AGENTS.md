@@ -197,7 +197,7 @@ add a row once I've actually solved a problem with that pattern.
 | BST — inorder is sorted / bounds | BST + "validate" or "k-th smallest"; pass min/max down | `neetcodeio/tree/inorder_traversal/`, `neetcodeio/tree/valid_binary_search_tree/`, `neetcodeio/tree/kth_smallest_element_bst/`, `neetcodeio/tree/lowest_common_ancestor_bst/` |
 | Tree BFS (level order) | "level by level", "right side view", anything per depth | `neetcodeio/tree/level_order_traversal/`, `neetcodeio/tree/binary_tree_right_side_viewer/`, `neetcodeio/tree/is_binary_tree_balanced/` |
 | Grid flood fill (DFS/BFS) | 2D grid + "count/measure connected regions" | `neetcodeio/graph/num_islands/`, `neetcodeio/graph/max_area_islands/` |
-| Reverse flood from the edges | "which cells can reach the border/ocean" — start from the target, not every cell | `neetcodeio/graph/atlantic_pacific_water/` |
+| Reverse flood from the edges | "which cells can reach the border/ocean", "capture regions not touching the edge" — start from the target, not every cell | `neetcodeio/graph/atlantic_pacific_water/`, `neetcodeio/graph/surrounded_regions/` |
 | Multi-source BFS | "distance to the nearest X", "minutes until everything is reached" | `neetcodeio/graph/fresh_rotten_fruits/`, `neetcodeio/graph/islands_and_treasure/` |
 | Graph DFS — cycle detection | prerequisites / dependencies + "can you finish" | `neetcodeio/graph/course_schedule/` |
 | Old→new map (deep copy) | "deep copy" a graph or a list with extra pointers | `neetcodeio/graph/clone_graph/`, `neetcodeio/linked_list/copy_random_list/` |
